@@ -31,6 +31,7 @@ h6 {
 .link {
   text-decoration: none;
   color: var(--navy-blue);
+  transition: 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 .link:hover,
 .link:focus {
@@ -125,12 +126,26 @@ nav {
   padding: 24px 0;
   display: block;
 }
+.nav-active {
+  color: var(--ocean);
+}
+.nav-active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+}
 .contacts {
   font-weight: 400;
   font-style: normal;
   color: var(--slate);
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: inherit;
 }
 .contacts:hover,
 .contacts:focus {
@@ -143,7 +158,16 @@ nav {
 
 /*Hero*/
 .title-section {
+  max-width: 1440px;
   background-color: var(--navy-blue);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/people-office\ 1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
   margin: 0 auto;
@@ -177,6 +201,7 @@ nav {
   min-width: 169px;
   margin-left: auto;
   margin-right: auto;
+  transition: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .button:hover,
 .button:focus {
@@ -194,6 +219,18 @@ nav {
 .info-list {
   display: flex;
   gap: 24px;
+}
+.info-container-image {
+  background-color: var(--cloud);
+  border-radius: 4px;
+  flex-direction: column;
+  border: var(--light-slate) solid 1px;
+  height: 112px;
+}
+.info-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .info-list-item {
   flex-basis: calc((100% - 72px) / 4);
@@ -240,6 +277,35 @@ nav {
 .team-text {
   text-align: center;
 }
+.social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.social-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-image {
+  fill: var(--cloud);
+}
+.social-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.social-link:focus,
+.social-link:hover {
+  background-color: var(--ocean);
+}
 
 /*portfolio section*/
 
@@ -272,6 +338,20 @@ nav {
   width: calc((100% - 48px) / 3);
   background-color: var(--white);
   border: var(--cornflower);
+}
+.image-portfolio-container {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-image:hover {
+}
+.layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--iris);
+  width: 100%;
+  height: 100%;
 }
 .portfolio-sub-title {
   font-weight: 500;
@@ -308,7 +388,7 @@ nav {
 .footer-logo-one {
   color: var(--cloud);
 }
-.footer-text {
+.white-text {
   color: var(--cloud);
   letter-spacing: 0.02em;
   width: 264px;
