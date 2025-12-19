@@ -86,6 +86,7 @@ ul {
 .header {
   display: flex;
   border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .header-container {
   background-color: var(--white);
@@ -121,6 +122,9 @@ nav {
   display: flex;
   gap: 40px;
 }
+.nav-list-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .nav-link {
   padding: 24px 0;
@@ -146,7 +150,7 @@ nav {
   color: var(--slate);
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover,
 .contacts:focus {
@@ -202,7 +206,7 @@ nav {
   min-width: 169px;
   margin-left: auto;
   margin-right: auto;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -266,7 +270,7 @@ nav {
   background-color: var(--white);
   border-radius: 0 0 4px 4px;
   text-align: center;
-  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .team-img {
   box-sizing: border-box;
@@ -289,6 +293,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-image {
   fill: var(--cloud);
@@ -393,6 +398,7 @@ nav {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-container-text {
   margin-right: 120px;
@@ -416,6 +422,9 @@ nav {
   color: var(--cloud);
   letter-spacing: 0.02em;
   width: 264px;
+}
+.footer-social-list {
+  gap: 16px;
 }
 .social-item-footer {
   display: flex;
