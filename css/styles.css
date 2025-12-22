@@ -167,13 +167,11 @@ nav {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/hero-background.jpg);
+    url(../images/hero-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-}
-.hero-title-container {
   padding: 188px 0;
 }
 .title {
@@ -281,6 +279,7 @@ nav {
 }
 .team-text {
   text-align: center;
+  margin-bottom: 8px;
 }
 .social-list {
   display: flex;
